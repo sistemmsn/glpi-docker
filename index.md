@@ -132,6 +132,9 @@ RUN chown -R apache:apache /etc/glpi && \
 EXPOSE 88
 
 VOLUME /var/www/glpi
+VOLUME /etc/glpi
+VOLUME /var/lib/glpi
+VOLUME /var/log/glpi
 
 ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
 
