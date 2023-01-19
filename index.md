@@ -257,4 +257,3 @@ volumes:
 [Ejemplos de ejecución](https://pub.nethence.com/docker/dumb-init).
 
 [GitHub Gjcarneiro](https://github.com/gjcarneiro/yacron).
-
