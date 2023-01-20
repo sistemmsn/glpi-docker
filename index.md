@@ -242,7 +242,7 @@ services:
       - lib:/var/lib/glpi
       - log:/var/log/glpi
     restart: always
-#NIGNX Container
+#NIGNX Container opcional 
   nginx:
     image: nginx-glpi:sistemmsn
     ports:
@@ -257,6 +257,8 @@ volumes:
 ```
 
 - Nota: una vez lenvantado el stack de glpi entraremos al contendor de nginx y correremos el siguente comando: certbot --nginx -d glpi.empresa.com una vez tomado el certificado prodeceremos a reinicarle el nginx: nginx -s reload
+
+- Consulta: [Nignx Managet](https://nginxproxymanager.com/guide/#features). 
 
 <h2>Referencias</h2>
 
