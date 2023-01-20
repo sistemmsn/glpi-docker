@@ -232,13 +232,15 @@ services:
       MARIADB_PASSWORD: glpipass
     restart: always
 
-#GLPI Container
   glpi:
     image: apache-glpi:sistemmsn
     container_name : glpi
     hostname: glpi
     volumes:
-      - glpidata:/var/www/html/glpi
+      - page:/var/www/glpi
+      - etc:/etc/glpi
+      - lib:/var/lib/glpi
+      - log:/var/log/glpi
     restart: always
 #NIGNX Container
   nginx:
@@ -247,8 +249,11 @@ services:
       - 80:80
       - 443:443
 volumes:
-    db: {}
-    glpidata: {}
+    db:
+    etc:
+    lib:
+    log:
+    page:
 ```
 
 - Nota: una vez lenvantado el stack de glpi entraremos al contendor de nginx y correremos el siguente comando: certbot --nginx -d glpi.empresa.com una vez tomado el certificado prodeceremos a reinicarle el nginx: nginx -s reload
