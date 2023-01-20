@@ -230,6 +230,8 @@ services:
       MARIADB_DATABASE: glpidb
       MARIADB_USER: glpiuser
       MARIADB_PASSWORD: glpipass
+# Favor de reemplazar su zona horaria      
+      TZ: America/Mexico_City
     restart: always
 
   glpi:
