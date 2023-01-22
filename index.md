@@ -258,8 +258,8 @@ volumes:
 ```
 - Nota una vez levantado el stack entrar al contenerdor de las bases de datos y correr el siguente comando: ``` GRANT SELECT ON `mysql`.`time_zone_name` TO 'glpiuser'@'%'; ``` esto es para tener acceso a las zonas horarias 
 
-- Nota: una vez lenvantado el stack de glpi entraremos al contendor de nginx y correremos el siguente comando: certbot --nginx -d glpi.empresa.com una vez tomado el certificado prodeceremos a reinicarle el nginx: nginx -s reload
-
+- Nota: una vez lenvantado el stack de glpi entraremos al contendor de nginx y correremos el siguente comando: ``` certbot --nginx -d glpi.empresa.com ``` una vez tomado el certificado prodeceremos a reinicarle el ``` nginx: nginx -s reload ```
+ 
 - Consulta: [Nignx Managet](https://nginxproxymanager.com/guide/#features). 
 
 <h2>Referencias</h2>
